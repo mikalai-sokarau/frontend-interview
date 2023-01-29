@@ -1,0 +1,5 @@
+[The Risk Management Process in Project Management](https://www.projectmanager.com/blog/risk-management-process-steps)
+[IT project risk management: 7 most common software development risks](https://tsh.io/blog/it-project-risk-management/)
+[Project Risk Assessment (Ultimate Guide to Project Risk, Part 1)](https://www.wrike.com/blog/ultimate-guide-to-project-risk-part-1-risk-assessment/)
+[Top 5 Reasons for Project Failure and How to Avert Disaster](https://www.wrike.com/blog/top-reasons-for-project-failure/)
+[Conflict management](https://en.wikipedia.org/wiki/Conflict_management)
