@@ -48,6 +48,16 @@
 * Prepare questions you want to discuss with a customer.
 * Be active, try to contribute to any discussions in which you participate.
 
+### How to deal with unhappy customers?
+* Collect information about the reason of dissatisfaction as much as possible.
+* Keep calm, be polite and friendly, stay involved in the conversation, listen actively.
+* Provide a solution / have a plan of actions / prepare follow-ups.
+* Don't promise things impossible to resolve / deliver.
 
-
+### How to manage dependency on a third-party team?
+* Explain to a customer that delivery of your piece of functionality depends on the assumption that external team will deliver their piece.
+* Create a plan of delivery, track progress of each step.
+* Arrange periodical sync-ups with this team to be updated with their progress.
+* Keep a customer informed.
+* Don't be afraid to escalate a problem, possible prioritization on the customer side can help.
 
