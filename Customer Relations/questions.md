@@ -1,7 +1,8 @@
 ### Customer asked to implement some solution, but you understood that the solution isn't optimal and there are better ways to implement it, what would you do as a team lead to convince a customer?
 * Ask about a reason of choosing the suboptimal approach. Maybe you don't see the whole picture, maybe a customer has mistakenly chosen a wrong solution.
-* Highlight the risk of implementing the proposed solution. Explain possible consequences of implementing it. Create a table with comparison of several solutions, comparing them by pros and cons, risks, limitations, etc. Ask some authority to whom a customer might believe to compare proposed solutions (it can be someone from client's side, SA, DM, PM etc.).
+* Highlight the risk of implementing the proposed solution. Explain possible consequences of implementing it. Create a table with comparison of several solutions, comparing them by pros and cons, risks, limitations, etc. Ask some authority to whom a customer might believe to compare proposed solutions (it can be someone from client's side, SA, DM, PM, etc.).
 * Implement POC if resources and time allows.
+* Ask for help in competency center.
 * If a proposed solution is really risky, it makes sense to discuss it with management of your company (PM, DM) to make it clear to everyone around, and in order to not gain possible reputational losses to the company in the future.
 
 ### There is a project that must be delivered at some particular date, 2 months before the deadline you understand that you won't be able to deliver it, what will you do and how to explain it to a client?
@@ -22,6 +23,15 @@
 * Analyze a situation, check metrics (number of story points delivered, etc.) of this person, ask for feedback from his colleagues.
 * Discuss a situation with a person in supportive way, there can be temporary personal issues because of which a person couldn't concentrate on tasks, but after some time or a short vacation productivity can be restored.
 * It also might be mutual dissatisfaction, a person will gladly change a project, and it will be the cheapest option to replace a person.
+
+### What is a conflict?
+A conflict is a situation in which two or more parties have incompatible goals, interests, or values that create disagreement.
+
+### How to deal with unhappy customers?
+* Collect information about the reason of dissatisfaction as much as possible.
+* Keep calm, be polite and friendly, stay involved in the conversation, listen actively.
+* Provide a solution / have a plan of actions / prepare follow-ups.
+* Don't promise things impossible to resolve / deliver.
 
 ### What to do if two teammates have problems communicating with each other?
 * Try to understand a reason of the problem. Discuss it privately with each person, try to find a way to improve communication between them.
@@ -48,12 +58,6 @@
 * Usually there is a list of questions that should be discussed in a business trip, you should be ready to discuss them, brush up required technical / project knowledge.
 * Prepare questions you want to discuss with a customer.
 * Be active, try to contribute to any discussions in which you participate.
-
-### How to deal with unhappy customers?
-* Collect information about the reason of dissatisfaction as much as possible.
-* Keep calm, be polite and friendly, stay involved in the conversation, listen actively.
-* Provide a solution / have a plan of actions / prepare follow-ups.
-* Don't promise things impossible to resolve / deliver.
 
 ### How to manage dependency on a third-party team?
 * Explain to a customer that delivery of your piece of functionality depends on the assumption that external team will deliver their piece.
