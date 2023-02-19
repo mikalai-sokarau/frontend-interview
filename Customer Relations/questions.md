@@ -78,4 +78,3 @@ Examples of risks:
 * Staffing
 * Specific technologies on the project
 * Bus factor
-
