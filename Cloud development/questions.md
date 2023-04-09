@@ -87,3 +87,90 @@ Cons:
 1. Complex Setup: Setting up VPC can be complex, especially for users who are not familiar with networking concepts. Users need to have a good understanding of IP addressing, routing, and network security to create a functional VPC.
 2. Requires Maintenance: VPC requires ongoing maintenance to ensure that it is functioning properly. This includes monitoring network traffic, managing security groups, and updating routing tables.
 3. Difficult to Troubleshoot: Troubleshooting network issues in VPC can be difficult, especially for users who are not familiar with networking concepts. Users need to have a good understanding of network troubleshooting tools and techniques to resolve issues.
+
+### What does cloud development mean?
+Cloud development refers to the practice of developing, deploying, and maintaining applications and services in cloud computing environments, such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform. Instead of deploying and managing applications on local servers, cloud development allows developers to use remote infrastructure to create and scale applications.
+
+### Cloud
+Pros:
+* Scalability: the ability to easily and quickly scale up or down resources to meet demand.
+* Availability: cloud services are typically designed with high availability and redundancy, ensuring that services remain available even in the event of hardware failures.
+* Maintenance: cloud providers typically handle hardware maintenance and software updates, allowing customers to focus on their applications rather than infrastructure.
+* Flexibility: cloud solutions offer the ability to quickly spin up and deploy new applications or services, without needing to procure and configure hardware.
+* Low initial costs.
+
+Cons:
+* Security: there is a risk of data breaches or other security vulnerabilities when using cloud services.
+* Cost: while cloud solutions offer flexibility, they can also be more expensive than on-premise solutions in certain situations, particularly for long-term usage.
+* In most cases it will be vendor lock-in, migration will be difficult if needed.
+* Engineers must have cloud skill set.
+
+### On premise
+Pros:
+* Full control of the system (even without Internet connection), physical access to it, low latency.
+* Full customization based on project's requirements.
+* Maybe a good choice if the project owns secret/critical data (government, banks).
+
+Cons:
+* High initial investment, underutilized resources are financially wasteful.
+* May be difficult to set up complicated functionality such as quantum calculations, speech recognition, etc.
+* Necessity to spend time and efforts on scalability, security, licensing, administration, back-ups, etc.
+
+### Hybrid
+Pros:
+* May be used for storing important but not critical data, such as back-ups; own capacities can be used more efficiently.
+* Allows to own the most critical data on premise but delegate some safe part of work to cloud (e.g. add more cloud servers in case if own capacity isn't enough at peak load).
+
+Cons:
+* Transferring large amounts of data between cloud and on premise infrastructure can be ineffective.
+* Knowledge of engineers working with both approaches should be high.
+
+### What is IAAS?
+IaaS stands for Infrastructure as a Service. It is a type of cloud computing service that provides users with virtualized computing resources over the internet. This includes access to servers, storage, networking, and other computing infrastructure components. Examples of popular IaaS providers include Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.
+
+### What is SAAS?
+SaaS stands for "Software as a Service". It is a model of cloud computing where software applications are provided and managed remotely over the internet by third-party providers. In this model, users do not have to install and maintain software on their own devices, but rather access them through a web browser or other interface provided by the service provider. Examples: Firebase, DynamoDB, GitHub enterprise.
+
+### Can you be sure that an on-premise solution will be more reliable than a cloud provider?
+It's not possible to say that an on-premise solution will be more reliable than a cloud provider in all cases. Cloud providers have more resources and different availability zones to ensure high reliability, while on-premise solutions require a significant investment to set up the correct infrastructure and network for reliability. However, there may be some specific cases where an on-premise solution is preferred, such as data security concerns or if a cloud provider cannot provide a specific feature or service.
+
+###  Which approach will be less or more expensive, cloud or on-premise?
+In general, on-premise solutions require a larger upfront investment in hardware and infrastructure, as well as ongoing maintenance and upgrades. This can make them more expensive in the long run, especially if the organization needs to scale up its operations.
+
+On the other hand, cloud solutions typically have lower upfront costs and are often offered on a subscription-based pricing model, allowing organizations to pay only for the resources they use. This can make cloud solutions more cost-effective for smaller organizations or those with fluctuating demand for resources.
+
+### What are some specific things that cloud providers cannot provide, which may require on-premise solutions?
+* Regulatory compliance: Some industries, such as healthcare and finance, are subject to strict regulatory requirements for data privacy and security. In some cases, on-premise solutions may be necessary to meet these regulations.
+* Legacy applications: Some businesses may have legacy applications or systems that are not compatible with cloud environments. Migrating these systems to the cloud can be difficult and costly.
+* Custom hardware: Certain applications may require specialized hardware that is not available in the cloud. In these cases, an on-premise solution may be necessary to support the hardware.
+* Limited internet connectivity: In areas where internet connectivity is limited or unreliable, cloud solutions may not be feasible. In these cases, on-premise solutions may be necessary to ensure reliable access to critical applications and data.
+* Large-scale data processing: For organizations that need to process large amounts of data quickly and frequently, an on-premise solution may be more cost-effective than using cloud resources. Cloud providers charge for data egress (transferring data out of their network), which can be expensive for large-scale data processing tasks.
+
+### What does serverless mean?
+Serverless stands for computing model where developers write code and set up the entire infrastructure in a configuration file, and the cloud provider builds and manages the infrastructure for them.
+
+Pros:
+Faster development.
+Testability.
+
+Cons:
+Complexity.
+Vendor lock-in.
+Debugging.
+
+### Difference between IaC and serverless?
+IaC is a way to manage infrastructure as code, while serverless is a model of cloud computing where infrastructure management is abstracted away from developers.
+
+### How does networking in the cloud work?
+Virtual networks in the cloud can be divided into subnets, which allow for more granular control over traffic flow and access. Access to the virtual network can be controlled through security groups, which act as firewalls, controlling inbound and outbound traffic. Load balancers can also be used to distribute traffic across multiple instances or resources to improve performance and reliability.
+
+Networking in the cloud also involves the use of specialized services and tools, such as content delivery networks (CDNs), domain name system (DNS) management, and elastic IP addresses, to optimize network performance, security, and availability.
+
+### What are the core services that a cloud provider should have?
+* Compute: This service provides virtual machines or containers that allow users to run their applications or workloads in the cloud.
+* Storage: This service provides various types of storage options such as object storage, block storage, and file storage to store and manage data.
+* Networking: This service provides networking capabilities such as virtual networks, load balancers, and firewalls to enable communication between resources in the cloud and with external networks.
+* Database: This service provides database solutions such as SQL and NoSQL databases to manage and store data.
+* Identity and Access Management (IAM): This service provides authentication and authorization capabilities to control user access and manage permissions for cloud resources.
+* Security: This service provides various security solutions such as encryption, threat detection, and compliance to ensure the security of cloud resources.
+* Monitoring and Management: This service provides tools to monitor and manage the performance and availability of cloud resources.

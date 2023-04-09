@@ -142,3 +142,11 @@ emerge from self-organizing teams.
 12. At regular intervals, the team reflects on how
 to become more effective, then tunes and adjusts
 its behavior accordingly.
+
+### How to choose a correct SDLC metodology?
+Selecting the right software development life cycle methodology depends on several factors, such as project scope, budget, timeline, team size, and the nature of the project. 
+
+1. Evaluate and determine the project's scope, complexity, and size.
+2. Consider the team size and expertise. If you have a small team with limited experience, you may want to choose a methodology that is simpler to implement.
+3. Consider the client's involvement. If the client wants to be involved in every stage of the development process, Agile or Scrum may be the best option.
+4. Assess risk tolerance. If the project is mission-critical and requires a high level of quality, then a more traditional methodology like Waterfall may be a better choice. If the project requirements frequently change or if it is in a highly dynamic and competitive domain, Scrum would be a more appropriate choice.
