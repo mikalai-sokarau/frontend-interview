@@ -14,12 +14,10 @@ Performance refers to how efficiently and effectively the application is able to
 7. Number of HTTP Requests: The number of requests made to a server to load a page.
 ...and many others.
 
-
 ### How can we understand that performance of the application is low?
 * Collect metrics and compare current values with previous to understand if the application is starting behave worse.
 * To stick to the performance NFR requirements.
 * To track response times, page load, resource usage, throughput, errors and users complains, all of it can be a signal of low performance.
-
 
 ### What should you do before starting code optimization?
 * Make sure that existing code works correctly, and it's covered with tests.
@@ -36,16 +34,18 @@ Performance refers to how efficiently and effectively the application is able to
 * Check async/defer attributes in <script /> tags.
 * 
 
-### What are pros/cons of server-side rendering?
+### What are the pros and cons of using server side rendering?
 Pros:
-* Improved SEO: Search engines typically have difficulty crawling and indexing client-side rendered pages, since the content is generated dynamically by JavaScript. 
-* Faster initial load time because fully rendered page is sent to the client's browser without requiring additional time for client-side rendering
-* Improved performance on low-powered devices since client-side rendering can be resource-intensive, particularly on low-powered devices such as mobile phones.
-* Better accessibility because content is delivered to the client as fully rendered HTML, making it more accessible to users who rely on screen readers or other assistive technology.
+1. Better SEO: Server-side rendering enables search engines to easily crawl and index the website, leading to better SEO performance.
+2. Faster Initial Load Time: Server-side rendering can send pre-rendered HTML to the browser, resulting in a faster initial load time.
+3. Better Accessibility: Server-side rendering can improve accessibility since it allows the browser to display content before JavaScript is fully loaded.
+4. Better Performance on Low-Powered Devices: Server-side rendering can improve performance on low-powered devices since it reduces the amount of client-side processing required.
+5. Improved Security: Server-side rendering can reduce the risk of XSS attacks by rendering content on the server before sending it to the client.
+
 Cons:
-* Increased server load: Server-side rendering puts more strain on the server, as it has to render and serve HTML for each page request.
-* Higher development complexity: Server-side rendering requires more complex development processes compared to client-side rendering.
-* Slower subsequent page loads: With server-side rendering, subsequent page loads may be slower, as the client has to request the server for every new page load.
+1. Higher Server Load: Server-side rendering can put a higher load on the server since the server has to render each page before sending it to the client.
+2. More Complex Development: Server-side rendering requires more complex development, including setting up a server and dealing with issues related to server-side rendering.
+3. Slower Subsequent Page Loads: While server-side rendering can improve initial load times, subsequent page loads can be slower since the server has to render each page before sending it to the client.
 
 ### What types of server-side rendering exist?
 * Pre-rendering: web pages are generated at build time, and the pre-rendered HTML is served to the client upon request. This approach can provide fast initial load times, and is often used for static sites or sites with a small` number of pages that don't require dynamic content.
@@ -74,7 +74,6 @@ Cons:
 ### How to optimize Angular applications?
 * Use OnPush strategy.
 * Use trackBy attribute to render arrays of data.
-
 
 ### How does event loop work in JavaScript?
 JavaScript is single threaded language, to manage execution of asynchronous code such as network requests, timers, events there is a concept of event loop. The event loop consists of two main components: the call stack and the message queue.
@@ -148,15 +147,13 @@ Service workers, on the other hand, are a type of web worker that run independen
 9. Use the Production Mode: Enabling production mode provides additional performance optimizations such as disabling Angular's debugging features and changing the change detection strategy.
 10. Profile and analyze application performance using tools such as Chrome DevTools or Angular's built-in performance profiling tools to identify performance bottlenecks and areas for improvement.
 
-### What are the pros and cons of using server side rendering?
-Pros:
-1. Better SEO: Server-side rendering enables search engines to easily crawl and index the website, leading to better SEO performance.
-2. Faster Initial Load Time: Server-side rendering can send pre-rendered HTML to the browser, resulting in a faster initial load time.
-3. Better Accessibility: Server-side rendering can improve accessibility since it allows the browser to display content before JavaScript is fully loaded.
-4. Better Performance on Low-Powered Devices: Server-side rendering can improve performance on low-powered devices since it reduces the amount of client-side processing required.
-5. Improved Security: Server-side rendering can reduce the risk of XSS attacks by rendering content on the server before sending it to the client.
-
-Cons:
-1. Higher Server Load: Server-side rendering can put a higher load on the server since the server has to render each page before sending it to the client.
-2. More Complex Development: Server-side rendering requires more complex development, including setting up a server and dealing with issues related to server-side rendering.
-3. Slower Subsequent Page Loads: While server-side rendering can improve initial load times, subsequent page loads can be slower since the server has to render each page before sending it to the client.
+### What are techniques to optimize and reduce bundle size on the project?
+* Code Splitting: Code splitting is a technique where you split your code into smaller chunks, which are loaded on demand only when needed. This can significantly reduce the initial bundle size and improve load times. You can use tools like Webpack or Rollup to implement code splitting in your project.
+* Lazy Loading: Lazy loading is a technique where you load components or modules only when they are actually needed, instead of loading them all upfront. This can be achieved using dynamic imports or lazy loading APIs provided by modern frameworks like React, Angular, or Vue.
+* Tree Shaking: Tree shaking is a process of eliminating unused code from the final bundle. This is done by static analysis of the code to determine which parts are actually used and which are not. This can be achieved by using tools like Webpack along with ES6 modules, which allow for dead code elimination.
+* Minification: Minification is the process of reducing the size of your code by removing unnecessary characters like whitespace, comments, and renaming variables and functions to shorter names. This can be achieved using minification plugins or tools like Terser or UglifyJS.
+* Compression: Compression is the process of reducing the size of your assets by compressing them before sending them over the network. Common compression techniques include gzip, brotli, or other compression algorithms supported by web servers.
+* Image Optimization: Optimizing images can greatly reduce the overall bundle size, as images are usually one of the largest assets in a web project. Techniques such as image compression, lazy loading of images, and using responsive images can help reduce the image size and improve performance.
+* Externalize Dependencies: Externalizing dependencies means loading external libraries or dependencies from a CDN or other external source, instead of bundling them with your application code. This can help reduce the size of your bundle and improve caching and loading times.
+* Runtime Environment: Consider the runtime environment of your application and optimize accordingly. For example, in a production environment, you can use production builds, enable server-side caching, and leverage Content Delivery Networks (CDNs) to serve static assets efficiently.
+* Code Review and Refactoring: Regular code review and refactoring can help identify and eliminate unnecessary or redundant code, reduce duplication, and optimize performance.
