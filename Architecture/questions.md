@@ -53,4 +53,21 @@ There are several approaches to separating an application, depending on the requ
 ### What an architect does on the project?
 A software architect is responsible for the design and overall technical direction of a software project. Their main role is to create a blueprint of the software system that describes how different components and modules will work together to meet the functional and non-functional requirements of the system.
 
+### What does micro frontend approach mean?
+Micro frontends is an architectural pattern where a front-end application is divided into smaller, self-contained and loosely-coupled micro-applications, each responsible for a specific part of the user interface. These micro-applications can be developed, deployed, and maintained independently, allowing for flexibility and scalability in front-end development.
+
+Pros:
+* Scalability and flexibility: Micro frontends allow for independent development and deployment of smaller, self-contained components, enabling teams to work independently and at their own pace. This can result in improved scalability, flexibility, and faster development cycles.
+* Reusability and maintainability: Micro frontends can promote reusability of components and UI elements across multiple applications, reducing duplication of code and efforts. This can lead to improved maintainability and easier updates and bug fixes.
+* Team autonomy: Micro frontends allow for separation of concerns, enabling different teams to work independently on different parts of the front-end application. This can lead to better team autonomy, ownership, and productivity.
+* Technology diversity: Micro frontends allow for the use of different technologies and frameworks for different micro-applications, providing flexibility in technology choices based on the specific requirements of each micro-app. This can be advantageous in scenarios where different teams have different technology expertise or when integrating with legacy systems.
+
+Cons:
+* Increased complexity: Micro frontends introduce additional complexity in terms of managing multiple micro-applications, coordinating communication and state management between them, and handling cross-cutting concerns such as authentication, performance optimizations, and error handling.
+* Overhead and setup costs: Setting up and managing a micro frontends architecture requires additional effort in terms of tooling, infrastructure, and deployment pipelines. There may be overhead costs associated with managing multiple micro-applications, coordinating their development and deployment, and ensuring consistency across them.
+* Potential performance impact: Micro frontends may introduce additional overhead in terms of network requests, as each micro-application may require separate loading and execution of its own resources. This can impact performance and increase load times, especially in scenarios where multiple micro-applications are loaded on the same page.
+* Complexity in cross-cutting concerns: Managing cross-cutting concerns such as authentication, state management, and UI consistency can be challenging in a micro frontends architecture, as these concerns may need to be addressed separately for each micro-app. This can add complexity and increase development efforts.
+
+
+
 ### Examples of non-functional requirements on your project and how to test / improve them on the project?
