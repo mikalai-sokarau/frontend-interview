@@ -56,8 +56,8 @@ Discuss consequences of this request (some tasks should be replaced, current wor
 Show metrics from the normal sprint, compare it with the sprint that was interrupted.
 Switch to kanban if it's easier to everyone.
 
-### What if a customer asks to extend a scope of the work taken for a year?
+### What to do if a customer asks to extend a scope of the work taken for a year?
 Discuss with a delivery manager allocation of additional resources (extend a team with juniors/hire new people/borrow developers from a neighbor stream), discuss overtimes if everyone agrees on it
 
 ### Difference between ideal man-days vs real man-days?
-Time used for development vs time spent with vacation & sick leaves & meetings & ...
+Ideal man-days represent the estimated effort in an ideal scenario without any delays, while real man-days reflect the actual effort considering the practical challenges and circumstances (vacations, sick leaves, meetings, ...) that arise during the project's execution. Real man-days provide a more accurate measure of the resources and time needed to complete the work.
