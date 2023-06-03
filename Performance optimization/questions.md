@@ -30,9 +30,28 @@ Performance refers to how efficiently and effectively the application is able to
 * Minification is removing unnecessary characters from code, such as whitespace, comments, and formatting.
 
 ### What to do if a website shows a white screen for several seconds after opening?
-* Check network tab in Devtools, make sure that there is no big resources downloading too much time.
-* Check async/defer attributes in <script /> tags.
-* 
+0. Check for errors: Inspect the browser console for any error messages or warnings that could provide insights into the problem. Look for JavaScript errors, failed network requests, or any other relevant information that could help identify the cause.
+
+1. Analyze the website's performance: Use performance analysis tools, such as browser developer tools or performance profiling tools, to identify potential bottlenecks and areas of improvement in terms of loading and rendering speed.
+
+2. Optimize the code and assets: Review the website's codebase, including HTML, CSS, and JavaScript, to ensure it is clean, efficient, and properly optimized. Minify and compress your code, optimize images and other assets, and consider using techniques like lazy loading, caching or asynchronous loading for improved performance.
+
+3. Review network requests: Examine the network requests made by the website during the initial loading phase. Identify any unnecessary requests or slow-loading resources, and optimize or eliminate them if possible. Consider using techniques like caching or content delivery networks (CDNs) to improve loading speed.
+
+4. Prioritize critical content: Ensure that the essential content of the website is loaded and displayed quickly. Load critical CSS and JavaScript inline or asynchronously to speed up the initial rendering. This can prevent the white screen from appearing while the page fully loads.
+
+5. Implement loading indicators: Show a loading indicator or progress bar during the initial loading process to give users a visual cue that the website is still loading. This can help manage their expectations and reduce frustration.
+
+6. Test across different devices and networks: Verify that the slow loading issue is not specific to a particular device or network. Test the website on different browsers, devices, and network conditions to identify any platform-specific issues or performance discrepancies.
+
+### How to optimize performance of js code?
+* Be aware of memory leaks, always unsubscribe timeouts, event listeners, observers, etc.
+* Avoid heavy DOM manipulations, use `createDocumentFragment` method to insert large html structures.
+* Use weak versions of map / set.
+* Use web workers for computation consuming tasks.
+* Memoize heavy calculations.
+* Use requestAnimationFrame for long complicated calculations / animations.
+* Minify code.
 
 ### What are the pros and cons of using server side rendering?
 Pros:
@@ -48,7 +67,7 @@ Cons:
 3. Slower Subsequent Page Loads: While server-side rendering can improve initial load times, subsequent page loads can be slower since the server has to render each page before sending it to the client.
 
 ### What types of server-side rendering exist?
-* Pre-rendering: web pages are generated at build time, and the pre-rendered HTML is served to the client upon request. This approach can provide fast initial load times, and is often used for static sites or sites with a small` number of pages that don't require dynamic content.
+* Pre-rendering: web pages are generated at build time, and the pre-rendered HTML is served to the client upon request. This approach can provide fast initial load times, and is often used for static sites or sites with a small number of pages that don't require dynamic content.
 * Server-side rendering on-demand: web pages are generated on the server in response to client requests. This allows for dynamic content and interactive experiences, and can improve SEO by providing fully rendered content to search engines.
 * Incremental server-side rendering: pre-rendering with on-demand rendering, allowing for fast initial load times and dynamic content. The initial page load is pre-rendered, while subsequent requests are rendered on-demand.
 * Hybrid rendering: both client-side rendering (CSR) and server-side rendering (SSR). The initial page load is server-side rendered, while subsequent page loads are rendered on the client using CSR. This approach allows for fast initial load times, dynamic content, and interactivity.
@@ -61,19 +80,6 @@ Cons:
 * Use a Content Delivery Network (CDN): A CDN can help distribute your website's content across a network of servers, reducing the distance that content needs to travel to reach the client's browser. This can help improve loading times, especially for users who are far away from your website's server.
 * Optimize server-side performance: Ensure that your server is optimized to handle requests efficiently, with adequate resources and configurations such as gzip/brotli compression.
 * Lazy loading: Implementing lazy loading allows for images, videos, and other media on the page to load only when they are scrolled into view, reducing the amount of content that needs to be loaded initially. Required resources can also be pre-downloaded using prefetch / preload html attributes.
-
-### How to optimize performance of js code?
-* Be aware of memory leaks, always unsubscribe timeouts, event listeners, observers, etc.
-* Avoid heavy DOM manipulations, use `createDocumentFragment` method to insert large html structures.
-* Use weak versions of map / set.
-* Use web workers for computation consuming tasks.
-* Memoize heavy calculations.
-* Use requestAnimationFrame for long complicated calculations / animations.
-* Minify code.
-
-### How to optimize Angular applications?
-* Use OnPush strategy.
-* Use trackBy attribute to render arrays of data.
 
 ### How does event loop work in JavaScript?
 JavaScript is single threaded language, to manage execution of asynchronous code such as network requests, timers, events there is a concept of event loop. The event loop consists of two main components: the call stack and the message queue.
@@ -94,20 +100,6 @@ To optimize the critical rendering path, it's important to minimize the number o
 SVG is an XML-based vector image format that defines graphics using paths, shapes, text, and other geometric elements. It is resolution-independent, which means that graphics created using SVG will always look sharp and clear, regardless of the size they are displayed at. Since SVG graphics are based on vector paths, they can be scaled without losing detail and are ideal for creating graphics such as logos, icons, and illustrations. SVG is also easily manipulated using CSS and JavaScript, making it highly customizable.
 
 Canvas, on the other hand, is a bitmap-based drawing technology that allows developers to create 2D and 3D graphics by manipulating pixels on a canvas element. Unlike SVG, which uses vector graphics, canvas uses pixel-based graphics that are created and rendered in real-time. Canvas is best suited for creating graphics that need to be animated or updated frequently, such as games, simulations, or data visualizations. However, canvas graphics are not resolution-independent, and resizing them can cause a loss of quality.
-
-### Critical rendering path explanation?
-The critical rendering path refers to the sequence of steps that a web browser takes to render a web page on a user's device. This process includes downloading, parsing, and rendering HTML, CSS, and JavaScript resources in the correct order.
-
-The critical rendering path has a significant impact on the performance of a web page. The faster a web page can be rendered, the better the user experience. A slow rendering time can result in a poor user experience, which can lead to a high bounce rate and reduced engagement on the website.
-
-The critical rendering path includes the following steps:
-* HTML parsing: The browser downloads the HTML file and parses it into a Document Object Model (DOM) tree. The DOM tree represents the content of the web page.
-* CSS parsing: The browser downloads and parses the CSS files associated with the web page. The CSS files define the styles that are applied to the HTML elements.
-* Render tree construction: The browser combines the DOM tree and the CSS rules to create a render tree, which defines the layout and visual appearance of the web page.
-* Layout: The browser calculates the size and position of each element in the render tree and arranges them on the screen.
-Painting: The browser draws the final layout on the screen.
-
-To optimize the critical rendering path, web developers can use several techniques, such as minifying CSS and JavaScript files, reducing the number of HTTP requests, and leveraging browser caching. By reducing the time it takes to render a web page, developers can improve the user experience and increase engagement on their website.
 
 ### Is there a difference between repaint and reflow process?
 Reflow (or layout) refers to the process of calculating the size and position of elements on a web page, based on the content, styles, and layout rules defined in the HTML and CSS. Reflow is triggered whenever a change is made to the layout of the page, such as adding or removing an element, changing the width or height of an element, or changing the font size. Reflow is a more expensive process than repaint because it requires the browser to recalculate the position and size of all affected elements, and may cause the entire page to be redrawn.
@@ -146,6 +138,7 @@ Service workers, on the other hand, are a type of web worker that run independen
 8. Use the Angular CLI: The Angular CLI provides many performance optimization tools such as generating production builds, measuring bundle sizes, and providing performance reports.
 9. Use the Production Mode: Enabling production mode provides additional performance optimizations such as disabling Angular's debugging features and changing the change detection strategy.
 10. Profile and analyze application performance using tools such as Chrome DevTools or Angular's built-in performance profiling tools to identify performance bottlenecks and areas for improvement.
+11. Angular Universal: If your application requires SEO or better performance on slow networks, consider using Angular Universal for Server-Side Rendering (SSR). This enables your application to render on the server before sending it to the client, improving initial load times and search engine discoverability.
 
 ### What are techniques to optimize and reduce bundle size on the project?
 * Code Splitting: Code splitting is a technique where you split your code into smaller chunks, which are loaded on demand only when needed. This can significantly reduce the initial bundle size and improve load times. You can use tools like Webpack or Rollup to implement code splitting in your project.
