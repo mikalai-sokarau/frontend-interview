@@ -3,13 +3,17 @@ Performance refers to how efficiently and effectively the application is able to
 
 ### What metrics to measure web performance do you know?
 1. Core Web Vitals are a set of metrics introduced by Google to measure and improve user experience on the web. The Core Web Vitals consist of three specific page speed and user interaction measurements that are critical to delivering a quality user experience:
-    * Largest Contentful Paint (LCP): This metric measures loading performance, specifically the time it takes for the largest content element (such as an image or video) to load and become visible within the user's viewport.
-    * First Input Delay (FID): This metric measures interactivity and responsiveness, specifically the time between a user's first interaction (such as clicking a button) and the time it takes for the application to respond.
-    * Cumulative Layout Shift (CLS): This metric measures visual stability, specifically the amount of unexpected layout shift that occurs during page loading.
-2. RAIL.
-3. Page Load Time: The amount of time it takes for a page to fully load in a user's browser.
+    * Largest Contentful Paint (LCP): This metric measures loading performance, specifically the time it takes for the largest content element (such as an image or video) to load and become visible within the user's viewport. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.
+    * First Input Delay (FID): This metric measures interactivity and responsiveness, specifically the time between a user's first interaction (such as clicking a button) and the time it takes for the application to respond. To provide a good user experience, pages should have a FID of 100 milliseconds or less.
+    * Cumulative Layout Shift (CLS): This metric measures visual stability, specifically the amount of unexpected layout shift that occurs during page loading. To provide a good user experience, pages should maintain a CLS of 0.1 or less.
+2. RAIL is a performance model, RAIL stands for Response, Animation, Idle, and Load, representing different aspects of user interaction with a web page. Currently, Core Web Vitals is preferred over RAIL.
+    * Response: This refers to the ability of a web page to respond quickly to user input, 100ms is a good response time.
+    * Animation: This refers to the ability of a web page to render animations smoothly, 60fps is a good animation rate, 10ms is a good frame budget.
+    * Idle: This refers to the ability of a web page to maintain a consistent frame rate during idle time, 50ms or less is good time.
+    * Load: This refers to the ability of a web page to load quickly and efficiently, under 2 seconds is a good load time.
+3. First Contentful Paint (FCP): the time it takes for the first content element of a web page to be rendered on the user's screen, 0–2 seconds is good.
 4. Time to First Byte (TTFB): The amount of time it takes for a user's browser to receive the first byte of data from a web server.
-5. Time to Interactive (TTI): The time it takes for a web page to become fully interactive for a user.
+5. Time to Interactive (TTI): The time it takes for a web page to become fully interactive for a user. Good result is 4 seconds or less.
 6. Page Size: The size of the web page, including all images, scripts, and other resources.
 7. Number of HTTP Requests: The number of requests made to a server to load a page.\
 ...and many others.
@@ -18,12 +22,14 @@ Performance refers to how efficiently and effectively the application is able to
 * Collect metrics and compare current values with previous to understand if the application is starting behave worse.
 * To stick to the performance NFR requirements.
 * To track response times, page load, resource usage, throughput, errors and users complains, all of it can be a signal of low performance.
+* Users feedback.
 
 ### What should you do before starting code optimization?
 * Make sure that existing code works correctly, and it's covered with tests.
 * Collect metrics (Devtools profiler, Lighthouse, etc.).
 * Understand what exactly slows the system down.
 * Set performance goals and start working on them.
+* Document results.
 
 ### What is obfuscation and minification? 
 * Obfuscation is a process of renaming variables and functions with nonsensical names or using techniques such as code flattening, where the code is transformed into a single large function to make it more difficult to understand.
@@ -67,10 +73,9 @@ Cons:
 3. Slower Subsequent Page Loads: While server-side rendering can improve initial load times, subsequent page loads can be slower since the server has to render each page before sending it to the client.
 
 ### What types of server-side rendering exist?
-* Pre-rendering: web pages are generated at build time, and the pre-rendered HTML is served to the client upon request. This approach can provide fast initial load times, and is often used for static sites or sites with a small number of pages that don't require dynamic content.
-* Server-side rendering on-demand: web pages are generated on the server in response to client requests. This allows for dynamic content and interactive experiences, and can improve SEO by providing fully rendered content to search engines.
-* Incremental server-side rendering: pre-rendering with on-demand rendering, allowing for fast initial load times and dynamic content. The initial page load is pre-rendered, while subsequent requests are rendered on-demand.
-* Hybrid rendering: both client-side rendering (CSR) and server-side rendering (SSR). The initial page load is server-side rendered, while subsequent page loads are rendered on the client using CSR. This approach allows for fast initial load times, dynamic content, and interactivity.
+* Static SSR: the server generates the HTML content for each page during the build process or on-demand, and the resulting HTML is then sent to the client.
+* Dynamic SSR: the server generates the HTML content on the server in response to each client request. 
+* Hybrid SSR: both static and dynamic SSR used to some extent.
 
 ### How to optimize loading of the web page?
 * Minimize HTTP requests: Reducing the number of HTTP requests made by your web page can significantly improve loading times. Combine multiple CSS files into one, reduce the number of images used, and remove any unnecessary scripts or plugins.
