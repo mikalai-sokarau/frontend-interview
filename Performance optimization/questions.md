@@ -11,7 +11,7 @@ Performance refers to how efficiently and effectively the application is able to
 4. Time to First Byte (TTFB): The amount of time it takes for a user's browser to receive the first byte of data from a web server.
 5. Time to Interactive (TTI): The time it takes for a web page to become fully interactive for a user.
 6. Page Size: The size of the web page, including all images, scripts, and other resources.
-7. Number of HTTP Requests: The number of requests made to a server to load a page.
+7. Number of HTTP Requests: The number of requests made to a server to load a page.\
 ...and many others.
 
 ### How can we understand that performance of the application is low?
